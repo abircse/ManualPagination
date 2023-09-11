@@ -12,6 +12,7 @@ import javax.inject.Inject
 class RepositoryImpl @Inject constructor(private val api: ApiService) : Repository {
 
     override suspend fun getCustomers(page: Int): Flow<CustomersModel> = flow {
+        kotlinx.coroutines.delay(3000)
         try {
             emit(api.getCustomers(page, "Token b4612ff19f25f37bd46bc35d6f8a092d1d0b51bd"))
         } catch (error: Exception) {

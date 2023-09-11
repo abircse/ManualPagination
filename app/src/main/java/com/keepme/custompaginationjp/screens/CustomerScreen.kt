@@ -62,7 +62,7 @@ fun CustomerContent(paddingValues: PaddingValues, navController: NavHostControll
 
     val shouldStartPaginate = remember {
         derivedStateOf {
-            viewModel.canPaginate && (lazyColumnListState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: -9) >= (lazyColumnListState.layoutInfo.totalItemsCount - 6)
+            viewModel.canPaginate && (lazyColumnListState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: -10) >= (lazyColumnListState.layoutInfo.totalItemsCount - 2)
         }
     }
 
